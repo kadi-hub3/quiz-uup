@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Wrapper } from './QuestionCard.styles'
+import { Button, } from './QuestionCard.styles'
 
 type Props = {
     question: string,
@@ -12,7 +12,7 @@ type Props = {
 
 const QuestionCard: React.FC<Props> = ({ question, answers, userAnswer, questionNr, totalQuestions, callback }) => {
     return (
-        <Wrapper>
+        <>
             <p className='question'>Question: {questionNr} / {totalQuestions}</p>
             <p dangerouslySetInnerHTML={{ __html: question }} />
             <div>
@@ -26,7 +26,7 @@ const QuestionCard: React.FC<Props> = ({ question, answers, userAnswer, question
                 }
             </div>
 
-        </Wrapper>
+        </>
     )
 }
 
