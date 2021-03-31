@@ -49,14 +49,14 @@ const GeneralPage = () => {
         <div>
             {!gameOver ? (<p>Score : {score}</p>) : null}
             {loading ? <p>Loading Queries...</p> : null}
-            {!loading && !gameOver && (<QuestionCard
+            {/* {!loading && !gameOver && (<QuestionCard
                 questionNr={number + 1}
                 totalQuestions={TOTAL_QUESTIONS}
                 question={questions[number].question}
                 answers={questions[number].answers}
                 userAnswer={userAnswer ? true : false}
                 callback={checkAnswer}
-            />)}
+            />)} */}
             {!gameOver && !loading && (<button className='next' onClick={nextQuery}>Next Question</button>)}
         </div>
     )
