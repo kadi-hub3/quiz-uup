@@ -1,55 +1,70 @@
-export { }
+import React, { useState } from 'react'
+import { Question } from './API'
+import QuestionCard from './components/QuestionCard'
+import { Link } from 'react-router-dom'
+import { FiLogOut } from 'react-icons/fi'
+const TOTAL_QUESTIONS = 10
 
 
-// import React, { Component, useState, createContext } from 'react';
-// import { fetchQuestions, Category, Difficulty, Question } from './API'
+export const QuizContext: any = React.createContext({});
+
+export type AnswerObject = {
+    question: string,
+    answer: string,
+    correct: boolean,
+    correctAnswer: string
+
+}
+export const QuizProvider: React.FC<{}> = ({ children }) => {
+    const [loading, setLoading] = useState(false)
+    const [questions, setQuestions] = useState<Question[]>([])
+    const [number, setNumber] = useState(0)
+    const [userAnswer, setUserAnswer] = useState<AnswerObject[]>([])
+    const [score, setScore] = useState(0)
+    const [gameOver, setGameOver] = useState(true)
 
 
-// const TOTAL_QUESTIONS = 10
+
+    const nextQuery = () => {
+        let next = number + 1
+        if (next === TOTAL_QUESTIONS) setGameOver(true);
+        else { setNumber(next) }
+    }
 
 
+    const checkAnswer = (e: any) => {
+        if (!gameOver) {
+            const answer = e.currentTarget.value
+            const correct = questions[number].correct_answer === answer
+            if (correct) setScore((prev: number) => prev + 1)
 
-// const QuizContext = React.createContext()
+            const answerObject = {
+                question: questions[number].question,
+                answer,
+                correct,
+                correctAnswer: questions[number].correct_answer
+            }
+            setUserAnswer(prev => [...prev, answerObject])
 
-// export const QuizProvider = () => {
-//     const [loading, setLoading] = useState(false)
-//     const [questions, setQuestions] = useState<Question[]>([])
-//     const [number, setNumber] = useState(0)
-//     const [userAnswer, setUserAnswer] = useState([])
-//     const [score, setScore] = useState(0)
-//     const [gameOver, setGameOver] = useState(true)
+        }
+    }
 
-//     const startQuiz = async () => {
-//         setLoading(true)
-//         setGameOver(false)
-//         const newQueries = await fetchQuestions(TOTAL_QUESTIONS, Category.Computers, Difficulty.MEDIUM)
-//         setQuestions(newQueries)
-//         console.log(newQueries);
-//         setNumber(0)
-//         setScore(0)
-//         setUserAnswer([])
-//         setLoading(false)
-// }
-// return (
-//     <>
-//         <h3>Brush up your knowledge</h3>
-//             {gameOver ?
-//                 (<button className='start' onClick={startQuiz}>General Knowledge</button>
-//                 ) : null
-//             }
-
-//             {!gameOver ? (<p>Score : {score}</p>) : null}
-//             {loading ? <p>Loading Queries...</p> : null}
-//             {!loading && !gameOver && (<QuestionCard
-//                 questionNr={number + 1}
-//                 totalQuestions={TOTAL_QUESTIONS}
-//                 question={questions[number].question}
-//                 answers={questions[number].answers}
-//                 userAnswer={userAnswer ? true : false}
-//                 callback={checkAnswer}
-//             />)}
-//             {!gameOver && !loading && (<button className='next' onClick={nextQuery}>Next Question</button>)}
-
-//     </>
-// );
-// }
+    return (
+        <QuizContext.Provider value={{ questions, setQuestions, loading, setLoading, number, setNumber, userAnswer, setUserAnswer, score, setScore, gameOver, setGameOver, nextQuery, checkAnswer }}>
+            {children}
+            {!gameOver ? (<p className='score'>Score : {score}</p>) : null}
+            {loading ? <p>Loading Queries...</p> : null}
+            {!loading && !gameOver && (<QuestionCard
+                questionNr={number + 1}
+                totalQuestions={TOTAL_QUESTIONS}
+                question={questions[number].question}
+                answers={questions[number].answers}
+                userAnswer={userAnswer ? userAnswer[number] : undefined}
+                callback={checkAnswer}
+            />)}
+            {!gameOver && number !== TOTAL_QUESTIONS - 1 && (<button className='next' onClick={nextQuery}>Next Question</button>)}
+            {!gameOver && !loading && (<Link to='/'><button className='next log-out'><FiLogOut />
+            </button></Link>)}
+        </QuizContext.Provider>
+    )
+}

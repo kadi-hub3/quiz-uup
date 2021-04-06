@@ -7,12 +7,12 @@ height: 60vh;
 background: #333;
 border-radius: 10px;
 border: 1em solid #555;
-padding: 1rem;
+padding: 2rem;
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 text-align: center;
-display:flex;
-flex-direction:column;
-margin: 1rem 0;`
+display: grid;
+place-items: center;
+margin: 4rem 0;`
 
 type ButtonWrapperProps = {
   correct: boolean;
