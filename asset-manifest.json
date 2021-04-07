@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.b5d48223.chunk.js",
-    "main.js.map": "/static/js/main.b5d48223.chunk.js.map",
+    "main.js": "/static/js/main.c158b923.chunk.js",
+    "main.js.map": "/static/js/main.c158b923.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d08dfd18.js",
     "runtime-main.js.map": "/static/js/runtime-main.d08dfd18.js.map",
-    "static/js/2.a5cd1e93.chunk.js": "/static/js/2.a5cd1e93.chunk.js",
-    "static/js/2.a5cd1e93.chunk.js.map": "/static/js/2.a5cd1e93.chunk.js.map",
+    "static/js/2.9326234a.chunk.js": "/static/js/2.9326234a.chunk.js",
+    "static/js/2.9326234a.chunk.js.map": "/static/js/2.9326234a.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.a5cd1e93.chunk.js.LICENSE.txt": "/static/js/2.a5cd1e93.chunk.js.LICENSE.txt",
+    "static/js/2.9326234a.chunk.js.LICENSE.txt": "/static/js/2.9326234a.chunk.js.LICENSE.txt",
     "static/media/CS-img.a53de674.jpg": "/static/media/CS-img.a53de674.jpg",
     "static/media/general-img.6f1d8480.jpg": "/static/media/general-img.6f1d8480.jpg",
     "static/media/geo-img.603776a8.jpg": "/static/media/geo-img.603776a8.jpg",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d08dfd18.js",
-    "static/js/2.a5cd1e93.chunk.js",
-    "static/js/main.b5d48223.chunk.js"
+    "static/js/2.9326234a.chunk.js",
+    "static/js/main.c158b923.chunk.js"
   ]
 }
