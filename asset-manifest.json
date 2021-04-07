@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.c158b923.chunk.js",
-    "main.js.map": "/static/js/main.c158b923.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d08dfd18.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d08dfd18.js.map",
-    "static/js/2.9326234a.chunk.js": "/static/js/2.9326234a.chunk.js",
-    "static/js/2.9326234a.chunk.js.map": "/static/js/2.9326234a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.9326234a.chunk.js.LICENSE.txt": "/static/js/2.9326234a.chunk.js.LICENSE.txt",
-    "static/media/CS-img.a53de674.jpg": "/static/media/CS-img.a53de674.jpg",
-    "static/media/general-img.6f1d8480.jpg": "/static/media/general-img.6f1d8480.jpg",
-    "static/media/geo-img.603776a8.jpg": "/static/media/geo-img.603776a8.jpg",
-    "static/media/history-img.2a5fc10a.jpg": "/static/media/history-img.2a5fc10a.jpg",
-    "static/media/politics-img.246a790e.jpg": "/static/media/politics-img.246a790e.jpg",
-    "static/media/religion-img.e1705431.jpg": "/static/media/religion-img.e1705431.jpg"
+    "main.js": "/quiz-uup/static/js/main.c158b923.chunk.js",
+    "main.js.map": "/quiz-uup/static/js/main.c158b923.chunk.js.map",
+    "runtime-main.js": "/quiz-uup/static/js/runtime-main.2bbbb48d.js",
+    "runtime-main.js.map": "/quiz-uup/static/js/runtime-main.2bbbb48d.js.map",
+    "static/js/2.6c3d4513.chunk.js": "/quiz-uup/static/js/2.6c3d4513.chunk.js",
+    "static/js/2.6c3d4513.chunk.js.map": "/quiz-uup/static/js/2.6c3d4513.chunk.js.map",
+    "index.html": "/quiz-uup/index.html",
+    "static/js/2.6c3d4513.chunk.js.LICENSE.txt": "/quiz-uup/static/js/2.6c3d4513.chunk.js.LICENSE.txt",
+    "static/media/CS-img.a53de674.jpg": "/quiz-uup/static/media/CS-img.a53de674.jpg",
+    "static/media/general-img.6f1d8480.jpg": "/quiz-uup/static/media/general-img.6f1d8480.jpg",
+    "static/media/geo-img.603776a8.jpg": "/quiz-uup/static/media/geo-img.603776a8.jpg",
+    "static/media/history-img.2a5fc10a.jpg": "/quiz-uup/static/media/history-img.2a5fc10a.jpg",
+    "static/media/politics-img.246a790e.jpg": "/quiz-uup/static/media/politics-img.246a790e.jpg",
+    "static/media/religion-img.e1705431.jpg": "/quiz-uup/static/media/religion-img.e1705431.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d08dfd18.js",
-    "static/js/2.9326234a.chunk.js",
+    "static/js/runtime-main.2bbbb48d.js",
+    "static/js/2.6c3d4513.chunk.js",
     "static/js/main.c158b923.chunk.js"
   ]
 }
