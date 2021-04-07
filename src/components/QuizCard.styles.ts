@@ -44,8 +44,9 @@ html {
 
   }
 
-`
+  
 
+`
 export const CardWrapper = styled.div`
 position: relative;
 display: flex;

@@ -8,7 +8,6 @@ import GeoPage from './GeoPage'
 import GeneralPage from './GeneralPage'
 
 
-
 const Home: React.FC = () => {
     return (
         <>

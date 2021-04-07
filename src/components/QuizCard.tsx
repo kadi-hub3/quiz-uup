@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import { QuizContext } from '../context'
 import { Link } from 'react-router-dom'
-import { CardWrapper, GlobalStyle } from './QuizCard.styles'
+import { GlobalStyle, CardWrapper } from './QuizCard.styles'
 import { fetchQuestions, Category, Difficulty } from '../API'
-
 const TOTAL_QUESTIONS = 10
 
 type Props = {
