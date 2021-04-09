@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/quiz-uup/static/js/main.c158b923.chunk.js",
-    "main.js.map": "/quiz-uup/static/js/main.c158b923.chunk.js.map",
+    "main.js": "/quiz-uup/static/js/main.5a7cc6f5.chunk.js",
+    "main.js.map": "/quiz-uup/static/js/main.5a7cc6f5.chunk.js.map",
     "runtime-main.js": "/quiz-uup/static/js/runtime-main.2bbbb48d.js",
     "runtime-main.js.map": "/quiz-uup/static/js/runtime-main.2bbbb48d.js.map",
-    "static/js/2.6c3d4513.chunk.js": "/quiz-uup/static/js/2.6c3d4513.chunk.js",
-    "static/js/2.6c3d4513.chunk.js.map": "/quiz-uup/static/js/2.6c3d4513.chunk.js.map",
+    "static/js/2.9a2f837e.chunk.js": "/quiz-uup/static/js/2.9a2f837e.chunk.js",
+    "static/js/2.9a2f837e.chunk.js.map": "/quiz-uup/static/js/2.9a2f837e.chunk.js.map",
     "index.html": "/quiz-uup/index.html",
-    "static/js/2.6c3d4513.chunk.js.LICENSE.txt": "/quiz-uup/static/js/2.6c3d4513.chunk.js.LICENSE.txt",
+    "static/js/2.9a2f837e.chunk.js.LICENSE.txt": "/quiz-uup/static/js/2.9a2f837e.chunk.js.LICENSE.txt",
     "static/media/CS-img.a53de674.jpg": "/quiz-uup/static/media/CS-img.a53de674.jpg",
     "static/media/general-img.6f1d8480.jpg": "/quiz-uup/static/media/general-img.6f1d8480.jpg",
     "static/media/geo-img.603776a8.jpg": "/quiz-uup/static/media/geo-img.603776a8.jpg",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2bbbb48d.js",
-    "static/js/2.6c3d4513.chunk.js",
-    "static/js/main.c158b923.chunk.js"
+    "static/js/2.9a2f837e.chunk.js",
+    "static/js/main.5a7cc6f5.chunk.js"
   ]
 }
