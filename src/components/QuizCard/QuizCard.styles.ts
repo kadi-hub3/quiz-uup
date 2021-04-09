@@ -7,8 +7,9 @@ html {
   body {
     margin: 0;
     padding: 0 2rem;
-    display: grid;
-   place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     background: #222;
     color: #fff;
     font-size: 1rem;
@@ -91,7 +92,7 @@ img{
   width: 100%;
   height: 100%;
   background: #fff;
-  transform: scalex(0);
+  transform: scaleX(0);
   transition: transform 0.2s ease-in-out;
   transform-origin: right;
 }
@@ -113,7 +114,7 @@ img{
     padding: 3rem;
     z-index: 1;
     transition: .2s;
-    transform: translateX(-300px);
+    transform: translateX(-500px);
   }
 
   .card .contentBx .content h3{

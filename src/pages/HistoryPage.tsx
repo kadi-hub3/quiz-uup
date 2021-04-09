@@ -1,5 +1,5 @@
 import React from 'react'
-import QuizCard from '../components/QuizCard'
+import QuizCard from '../components/QuizCard/QuizCard'
 import HistoryImg from '../images/history-img.jpg'
 
 const HistoryPage = () => {

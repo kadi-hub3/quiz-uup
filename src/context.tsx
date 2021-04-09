@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Question } from './API'
-import QuestionCard from './components/QuestionCard'
+import QuestionCard from './components/QuestionCard/QuestionCard'
 import { Link } from 'react-router-dom'
 import { FiLogOut } from 'react-icons/fi'
 const TOTAL_QUESTIONS = 10
