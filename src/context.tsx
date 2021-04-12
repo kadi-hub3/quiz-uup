@@ -23,14 +23,11 @@ export const QuizProvider: React.FC<{}> = ({ children }) => {
     const [score, setScore] = useState(0)
     const [gameOver, setGameOver] = useState(true)
 
-
-
     const nextQuery = () => {
         let next = number + 1
         if (next === TOTAL_QUESTIONS) setGameOver(true);
         else { setNumber(next) }
     }
-
 
     const checkAnswer = (e: any) => {
         if (!gameOver) {
@@ -49,6 +46,7 @@ export const QuizProvider: React.FC<{}> = ({ children }) => {
         }
     }
 
+
     return (
         <QuizContext.Provider value={{ questions, setQuestions, loading, setLoading, number, setNumber, userAnswer, setUserAnswer, score, setScore, gameOver, setGameOver, nextQuery, checkAnswer }}>
             {children}
@@ -62,9 +60,9 @@ export const QuizProvider: React.FC<{}> = ({ children }) => {
                 userAnswer={userAnswer ? userAnswer[number] : undefined}
                 callback={checkAnswer}
             />)}
-            {!gameOver && number !== TOTAL_QUESTIONS - 1 && (<button className='next' onClick={nextQuery}>Next Question</button>)}
-            {!gameOver && !loading && (<Link to='/'><button className='next log-out'><FiLogOut />
-            </button></Link>)}
+            {!gameOver && number !== TOTAL_QUESTIONS - 1 && userAnswer[number] && (<button className='next' onClick={nextQuery}>Next Question</button>)}
+            {!gameOver && number === TOTAL_QUESTIONS - 1 && (<Link className='next log-out' to='/'><FiLogOut />
+            </Link>)}
         </QuizContext.Provider>
     )
 }

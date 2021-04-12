@@ -5,24 +5,36 @@ export const ShinningTitle = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .title-span{
-    display: flex;
-    justify-content: center;
     font-size: 1.5rem;
-
+    padding: 0 4rem;
 }
+
 .sign {
-    font-size: 4em;
+    font-size: 6rem;
     color: #ffe6ff;
     text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
       -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
       0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
     animation: shine 2s forwards, flicker 3s infinite;
   }
-  
+
+  @media (max-width: 425px) {
+    .sign{
+      font-size: 3rem;
+    }
+    .title-span{
+      font-size: 1rem;
+
+    }
+    .title{
+      margin: 1rem 0;
+
+    }
+  }
   @keyframes blink {
     0%,
     22%,

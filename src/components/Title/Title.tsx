@@ -7,8 +7,10 @@ const Title = () => {
                 <div className="sign">
                     <span className="fast-flicker">Bru</span>
                     sh  <span className="flicker">  U</span>p
-            </div>
-                <span className='title-span'>your IQ</span>
+                </div>
+                <div>
+                    <span className='title-span'>your IQ</span>
+                </div>
             </div>
         </ShinningTitle>
     )

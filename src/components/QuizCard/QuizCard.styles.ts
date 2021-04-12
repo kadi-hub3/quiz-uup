@@ -10,6 +10,7 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     background: #222;
     color: #fff;
     font-size: 1rem;
@@ -21,7 +22,7 @@ html {
 
   .score{
     position: absolute;
-    top: 6%;
+    top: 16%;
     right: 15%;
     font-size: 2rem;
     color: #9eb5ff;
@@ -29,8 +30,8 @@ html {
 
   .next{
     position: absolute;
-    bottom: 25%;
-    right: 40%;
+    bottom: 5%;
+    right: 50%;
     padding: .5rem 2rem;
     border-radius: 1rem;
   }
@@ -44,22 +45,55 @@ html {
     font-size: 1rem;
 
   }
+  @media (max-width: 770px) {
+    .next{
+      right: 40%;
 
+    }
+    .log-out{
+      right: 5%;
+      bottom: 5%;
+    }
+    .score{
+      font-size: 1.5rem;
+      top: 20%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .next{
+      bottom: 5%;
+      right: 30%;
+
+    }
+    .log-out{
+      right: 5%;
+      bottom: 5%;
+    }
+    .score{
+      font-size: 1.5rem;
+      top: 15%;
+    }
+  }
   
+  @media (max-width: 375px) {
+    .next{
+      bottom: -10%;
+      right: 30%;
+
+    }
 
 `
 export const CardWrapper = styled.div`
 position: relative;
 display: flex;
-justify-content: center;
-flex-direction: column;
-flex-wrap: wrap;
 max-width: 80vw;
+flex-direction: row;
 
 .card{
     position: relative;
-    width: 400px;
-    height: 400px;
+    max-width: 600px;
+    max-height: 800px;
     margin: 15px;
     color: #333;
     overflow: hidden;
@@ -114,7 +148,7 @@ img{
     padding: 3rem;
     z-index: 1;
     transition: .2s;
-    transform: translateX(-500px);
+    transform: translateX(-600px);
   }
 
   .card .contentBx .content h3{
@@ -140,4 +174,5 @@ img{
   .card .contentBx .content .start:hover{
     background: orange;
   }
-`;
+
+  `
