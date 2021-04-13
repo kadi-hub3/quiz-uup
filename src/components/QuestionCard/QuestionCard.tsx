@@ -9,13 +9,16 @@ type Props = {
     userAnswer: AnswerObject | undefined,
     callback: (e: React.MouseEvent<HTMLButtonElement>) => void,
     questionNr: number,
+    score: string,
+    nextQuery: (e: React.MouseEvent<HTMLButtonElement>) => void,
     totalQuestions: number
 }
 
-const QuestionCard: React.FC<Props> = ({ question, answers, userAnswer, questionNr, totalQuestions, callback }) => {
+const QuestionCard: React.FC<Props> = ({ question, answers, userAnswer, questionNr, totalQuestions, score, nextQuery, callback }) => {
     return (
         <Wrapper>
             <p className='question'>Question: {questionNr} / {totalQuestions}</p>
+            <p className='score'>Score : {score}</p>
             <p dangerouslySetInnerHTML={{ __html: question }} />
             <div>
                 {answers && answers.map(answer => (
@@ -31,7 +34,7 @@ const QuestionCard: React.FC<Props> = ({ question, answers, userAnswer, question
                 ))
                 }
             </div>
-
+            <button className='next' onClick={nextQuery}>Next Question</button>
         </Wrapper>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import QuizPage from './pages/QuizPage'
 import { QuizProvider } from './context'
 
 const App = () => {
@@ -9,12 +10,12 @@ const App = () => {
       <QuizProvider>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/general' component={Home} />
-          <Route exact path='/computer-science' component={Home} />
-          <Route exact path='/history' component={Home} />
-          <Route exact path='/geography' component={Home} />
-          <Route exact path='/arts' component={Home} />
-          <Route exact path='/politics' component={Home} />
+          <Route exact path='/general' component={QuizPage} />
+          <Route exact path='/computer-science' component={QuizPage} />
+          <Route exact path='/history' component={QuizPage} />
+          <Route exact path='/geography' component={QuizPage} />
+          <Route exact path='/arts' component={QuizPage} />
+          <Route exact path='/politics' component={QuizPage} />
         </Switch>
       </QuizProvider>
     </>

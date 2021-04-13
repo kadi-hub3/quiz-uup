@@ -7,11 +7,13 @@ import CSImg from '../images/CS-img.jpg'
 import PoliticsImg from '../images/politics-img.jpg'
 import ArtsImg from '../images/religion-img.jpg'
 import Title from '../components/Title/Title'
+import { GlobalStyle } from './Home.styles'
 
 
 const Home: React.FC = () => {
     return (
         <>
+            <GlobalStyle />
             <Title />
             <QuizCard title='General Knowledge' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.' image={GeneralImg} category='General' link='/general' />
             <QuizCard title='History' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.' image={HistoryImg} category='History' link='/history' />

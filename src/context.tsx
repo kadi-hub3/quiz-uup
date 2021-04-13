@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { Question } from './API'
-import QuestionCard from './components/QuestionCard/QuestionCard'
-import { Link } from 'react-router-dom'
-import { FiLogOut } from 'react-icons/fi'
-const TOTAL_QUESTIONS = 10
 
+
+const TOTAL_QUESTIONS = 10
 
 export const QuizContext: any = React.createContext({});
 
@@ -50,19 +48,6 @@ export const QuizProvider: React.FC<{}> = ({ children }) => {
     return (
         <QuizContext.Provider value={{ questions, setQuestions, loading, setLoading, number, setNumber, userAnswer, setUserAnswer, score, setScore, gameOver, setGameOver, nextQuery, checkAnswer }}>
             {children}
-            {!gameOver ? (<p className='score'>Score : {score}</p>) : null}
-            {loading ? <p>Loading Queries...</p> : null}
-            {!loading && !gameOver && (<QuestionCard
-                questionNr={number + 1}
-                totalQuestions={TOTAL_QUESTIONS}
-                question={questions[number].question}
-                answers={questions[number].answers}
-                userAnswer={userAnswer ? userAnswer[number] : undefined}
-                callback={checkAnswer}
-            />)}
-            {!gameOver && number !== TOTAL_QUESTIONS - 1 && userAnswer[number] && (<button className='next' onClick={nextQuery}>Next Question</button>)}
-            {!gameOver && number === TOTAL_QUESTIONS - 1 && (<Link className='next log-out' to='/'><FiLogOut />
-            </Link>)}
         </QuizContext.Provider>
     )
 }
