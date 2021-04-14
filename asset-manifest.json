@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/quiz-uup/static/js/main.e7907c4f.chunk.js",
-    "main.js.map": "/quiz-uup/static/js/main.e7907c4f.chunk.js.map",
+    "main.js": "/quiz-uup/static/js/main.54b9c0a3.chunk.js",
+    "main.js.map": "/quiz-uup/static/js/main.54b9c0a3.chunk.js.map",
     "runtime-main.js": "/quiz-uup/static/js/runtime-main.2bbbb48d.js",
     "runtime-main.js.map": "/quiz-uup/static/js/runtime-main.2bbbb48d.js.map",
     "static/js/2.c3b78191.chunk.js": "/quiz-uup/static/js/2.c3b78191.chunk.js",
@@ -18,6 +18,6 @@
   "entrypoints": [
     "static/js/runtime-main.2bbbb48d.js",
     "static/js/2.c3b78191.chunk.js",
-    "static/js/main.e7907c4f.chunk.js"
+    "static/js/main.54b9c0a3.chunk.js"
   ]
 }
